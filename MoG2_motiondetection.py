@@ -1,6 +1,6 @@
 # Este programa utiliza el algoritmo Mixture of Gaussians (MoG2)
 # para detectar movimiento en un video, trazar la trayectoria del objeto detectado
-# y guardar coordenadas en archivo csv filtrando IDs con registros mayores que min_frames_to_CSV.
+# y guardar coordenadas en archivo csv filtrando IDs.
 # by YnerPoe  # ynerpoe@gmail.com  # labtec@umce.cl
 # junio-2025    
 # SPDX-License-Identifier: GPL-3.0-or-later
