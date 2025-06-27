@@ -19,10 +19,6 @@ motiondetection = cv2.createBackgroundSubtractorMOG2()
 # Cargar video desde archivo
 cap = cv2.VideoCapture('path/video.mp4')  # Reemplaza con la ruta de tu video
 
-# Parámetros de ajuste
-ajuste_tamaño = 100      # Área mínima para considerar un contorno como objeto
-ajuste_distacia = 75     # Distancia máxima para asociar un centroide a un objeto existente
-
 # Validar si el video se cargó correctamente
 if not cap.isOpened():
     print("Error: No se pudo cargar el video.")
@@ -71,7 +67,7 @@ try:
         contours, _ = cv2.findContours(motion_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         current_centroids = [
             (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-            for contour in contours if cv2.contourArea(contour) > ajuste_tamaño
+            for contour in contours if cv2.contourArea(contour) > 50
             if (M := cv2.moments(contour))["m00"] > 0
         ]
 
@@ -126,7 +122,7 @@ try:
         # Precalcula centroides y bounding boxes de los contornos válidos
         contornos_info = []
         for contour in contours:
-            if cv2.contourArea(contour) > ajuste_tamaño:
+            if cv2.contourArea(contour) > 100:
                 x, y, w, h = cv2.boundingRect(contour)
                 cx = x + w // 2
                 cy = y + h // 2
