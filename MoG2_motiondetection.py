@@ -1,14 +1,10 @@
 # Este programa utiliza el algoritmo Mixture of Gaussians (MoG2)
 # para detectar movimiento en un video, trazar la trayectoria del objeto detectado
 # y guardar coordenadas en archivo csv filtrando IDs con registros mayores que min_frames_to_CSV.
-# by YnerPoe
-# ynerpoe@gmail.com
-# junio-2025
-# SPDX-FileName: MoG_motiondetection.py
-# SPDX-FileCopyrightText: 2025 YnerPoe
+# by YnerPoe  # ynerpoe@gmail.com  # labtec@umce.cl
+# junio-2025    
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2025 YnerPoe
-
 
 import cv2
 import numpy as np
@@ -159,9 +155,6 @@ try:
             if best_bbox:
                 x, y, w, h = best_bbox
                 cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-
-        #cv2.imshow('Motion Mask', motion_mask)
-        #cv2.imshow('Original Frame', frame)
 
         frame_idx += 1
         if cv2.waitKey(timeframe) == ord('q'):
