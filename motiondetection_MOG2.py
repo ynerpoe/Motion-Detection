@@ -1,6 +1,7 @@
-# Este programa utiliza el algoritmo Mixture of Gaussians (MoG)
+# Este programa utiliza el algoritmo Mixture of Gaussians (MoG2)
 # para detectar movimiento en un video, trazar la trayectoria del objeto detectado
 # y guardar coordenadas en archivo csv filtrando IDs con registros mayores que min_frames_to_CSV.
+# se genera un registro de video de las trayectorias para contrastar los datos del archivo CSV
 # by YnerPoe
 
 import cv2
@@ -180,12 +181,7 @@ try:
 
         frame_idx += 1 # Incrementar el índice del frame
 
-        # Mostrar el frame original con las trayectorias
-        #cv2.imshow('Original Frame', frame)
-        # Mostrar la máscara de movimiento
-        #cv2.imshow('Motion Mask', motion_mask)
-
-        # Salir si se presiona 'q'
+     # Salir si se presiona 'q'
         if cv2.waitKey(timeframe) == ord('q'):
             break
         out.write(frame)  # Guarda el frame procesado
@@ -215,4 +211,5 @@ finally:
     end_time = time.time()
     total_time = end_time - start_time
     print(f"Tiempo total de ejecución: {total_time:.2f} segundos")
+
     print(f"FIN DEL PROCESO")
