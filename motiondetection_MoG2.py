@@ -2,7 +2,10 @@
 # para detectar movimiento en un video, trazar la trayectoria del objeto detectado
 # y guardar coordenadas en archivo csv filtrando IDs con registros mayores que min_frames_to_CSV.
 # se genera un registro de video de las trayectorias para contrastar los datos del archivo CSV
-# by YnerPoe
+# by YnerPoe  # ynerpoe@gmail.com  # labtec@umce.cl
+# julio-2025    
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2025 YnerPoe
 
 import cv2
 import numpy as np
@@ -213,3 +216,4 @@ finally:
     print(f"Tiempo total de ejecución: {total_time:.2f} segundos")
 
     print(f"FIN DEL PROCESO")
+
