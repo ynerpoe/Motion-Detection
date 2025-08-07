@@ -5,7 +5,7 @@ El código MoG2_motiodetection.py realiza detección y seguimiento de objetos en
 3) Dibuja trayectorias, IDs y bounding boxes en tiempo real.
 4) Guarda las trayectorias de todos los objetos detectados en un archivo CSV para análisis posterior.
 
-Adicionalmente, el archivo motiondetecttion_MOG2 operad de la  siguiente forma:
+Adicionalmente, el archivo motiondetecttion_MoG2 opera de la siguiente forma:
 1) Detecta movimiento en cada frame del video.
 2) Asigna y sigue objetos en movimiento usando centroides y un algoritmo de asignación óptima.
 3) Dibuja trayectorias, IDs y bounding boxes en tiempo real.
