@@ -25,10 +25,7 @@ video_tray_out = 'videos/video_tray_test.mp4'
 csv_out = 'tray_test.csv'  # Archivo CSV para guardar las trayectorias
 
 # Cargar video desde archivo
-#path = 'videos/pi128d_0E28_2024-11-01_10-02_020_motion_only_Raphidophoridae.avi'
-#path = 'videos/pi256b_1DD3_2024-11-08-20-00_001.h264'
-path = 'videos/test_suelo_Carabidae.mp4'
-cap = cv2.VideoCapture(path)
+cap = cv2.VideoCapture(.../ruta/video)
 total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT) # Número total de frames en el video
 fps = cap.get(cv2.CAP_PROP_FPS) # Frames por segundo del video
 duracion_segundos = total_frames / fps # Duración del video en segundos
@@ -102,10 +99,6 @@ try:
         if not ret:
             print("Fin del proceso de  video")
             break
-
-        # Reducir la resolución del frame para mejorar el rendimiento
-        #frame = cv2.resize(frame, (800, 600))
-        #frame = cv2.resize(frame, (640, 480))
 
         # Aplicar el algoritmo Mixture of Gaussians
         motion_mask = motiondetection.apply(frame, LEARNING_RATE)
@@ -216,4 +209,5 @@ finally:
     print(f"Tiempo total de ejecución: {total_time:.2f} segundos")
 
     print(f"FIN DEL PROCESO")
+
 
