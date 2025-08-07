@@ -21,8 +21,8 @@ LEARNING_RATE = -1  # Tasa de aprendizaje automática
 motiondetection = cv2.createBackgroundSubtractorMOG2()
 
 # Archivo de salida para el video con trayectorias
-video_tray_out = 'videos/video_tray_test.mp4'  
-csv_out = 'tray_test.csv'  # Archivo CSV para guardar las trayectorias
+video_tray_out = 'videos/video_out.mp4'  
+csv_out = 'tray_out.csv'  # Archivo CSV para guardar las trayectorias
 
 # Cargar video desde archivo
 cap = cv2.VideoCapture(.../ruta/video)
@@ -209,5 +209,6 @@ finally:
     print(f"Tiempo total de ejecución: {total_time:.2f} segundos")
 
     print(f"FIN DEL PROCESO")
+
 
 
