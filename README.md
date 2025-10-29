@@ -1,3 +1,5 @@
+Contacto: labtec@umce.cl
+
 El código MoG2_motiodetection.py realiza detección y seguimiento de objetos en movimiento en un video utilizando el algoritmo Mixture of Gaussians (MoG2) de OpenCV. A continuación se describe su funcionamiento paso a paso:
 
 1) Detecta movimiento en cada frame del video.
